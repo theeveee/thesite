@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&family");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap');
+
+@font-face {
+  font-family: 'DomaineDisplay';
+  src: url('../fonts/DomaineDisplay-Regular.woff') format("woff"),
+       url('../fonts/DomaineDisplay-Regular.ttf') format("truetype"),
+       url('../fonts/DomaineDisplay-Regular.eot') format("embedded-opentype");
+  
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTW';
+  src: url('../fonts/GT-Walsheim-Pro-Bold.woff') format("woff"),
+       url('../fonts/GT-Walsheim-Pro-Bold.ttf') format("truetype"),
+       url('../fonts/GT-Walsheim-Pro-Bold.eot') format("embedded-opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTW';
+  src: url('../fonts/GT-Walsheim-Pro-Light.woff') format("woff"),
+       url('../fonts/GT-Walsheim-Pro-Light.ttf') format("truetype"),
+       url('../fonts/GT-Walsheim-Pro-Light.eot') format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GTW';
+  src: url('../fonts/GT-Walsheim-Pro-Medium.woff') format("woff"),
+       url('../fonts/GT-Walsheim-Pro-Medium.ttf') format("truetype"),
+       url('../fonts/GT-Walsheim-Pro-Medium.eot') format("embedded-opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+
+	--White: #fff;
+	--Black: #000;
+	--Gray: #5b5b5b;
+	--lightGray:#c6c6c6 ;
+	--darkGray: #292929;
+	--Pink:#ffe3ea;
+	--Blue:#a0aaff;
+	--lightBlue:#e3eeff;
+	--Red: #c51339;
+	--Purple:#978bae;
+	--DarkPurple:#4a4962;
+	--lightPurple:#ede3ff;
+	--Sans: 'Jost','GTW','Noto Sans TC', sans-serif;
+	--Serif:'DomaineDisplay','Cormorant SC', serif;
+	--Number:'Cormorant SC','Bodoni Moda', serif;
+
+
+	--color-menu: #333;
+	--color-menu-hover: #333;
+	--color-button-close-hover: #ccc;
+
+	--cursor-stroke: #a0aaff;
+    --cursor-fill: none;
+    --cursor-stroke-width: 1px;
+
+	color: var(--White);
+	background-color:var(--Black);
+	font-family:var(--Sans);
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 1.5em;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	overflow-y: hidden;
+}
+
+main{
+	overflow: hidden;
+  	position: relative;
+}
+html.has-scroll-smooth {
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+section {
+	display: block;
+	width: 100vw;
+	position: relative;
+	z-index: 0;
+	padding: 0;
+	margin: 0;
+}
+
+.mobile {
+  display: none !important;
+}
+
+.logo{
+	display: block;
+	width: 100px;
+	height: 137px;
+	position: fixed;
+	top: 30px;
+	left: 40px;
+	z-index: 15;
+	/* background: url(../img/logo.svg) center center no-repeat; */
+	background-size: cover;
+	transition: .3s;
+}
+.frame--menu-open .logo {
+	/* background: url(../img/logoWhite.svg) center center no-repeat; */
+	background-size: cover;
+	opacity: 1;
+	transition: .3s;
+}
+
+.gray{
+	color: var(--Gray);
+}
+.pink{
+	color: var(--Pink);
+}
+.blue{
+	color: var(--Blue);
+}
+.white{
+	color: var(--White);
+}
+.black{
+	color: var(--Black);
+}
+.purple{
+	color: var(--Purple);
+}
+.red{
+	color: var(--Red);
+}
+.serif{
+	font-family: var(--Serif);
+}
+.sans{
+	font-family: var(--Sans);
+}
+.bold{
+	font-weight: bold;
+}
+
+.cursor {
+	display: none;
+}
+@media (any-pointer: fine) {
+	.cursor {
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: block;
+		pointer-events: none;
+		opacity: 0;
+		z-index: 100;
+	}
+	.cursor__inner {
+		fill: var(--cursor-fill);
+		stroke: var(--cursor-stroke);
+		stroke-width: var(--cursor-stroke-width);
+	}
+}
+
+/*Footer*/
+.footer{
+	background: var(--darkGray);
+	padding: 50px 0 30px 0;
+}
+.footer .container{
+	width: 90%;
+	max-width: 1280px;
+	margin: 0 auto;
+
+	display: flex;
+	justify-content: center;
+	align-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+.helf{
+	width: 50%;
+}
+.logoContainer{
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+}
+.aRowLogo{
+	width: calc(100% - 120px);
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.aRowLogo img{
+	display: block;
+	height: 50px;
+	margin:0 30px 30px 0;
+	transition: .3s;
+}
+.aRowLogo img:hover{
+	opacity: .5;
+	transition: .3s;
+}
+
+.logoTitle{
+	min-width: 120px;
+	color: var(--Gray);
+	width: 100px;
+	margin-right: 20px;
+	padding-top: 12px;
+	text-align: right;
+}
+
+.scrollDown{
+	font-size: 12px;
+	color: var(--White);
+	position: absolute;
+	bottom: 3%;
+	left: 50%;
+	transform: rotate(-90deg);
+	opacity: .8;
+	transition: .5s;
+	transition-delay: .5s;
+}
+.scrollDown div{
+	position: relative;
+	padding: 0 10px;
+}
+.scrollDown div::before{
+	content: '';
+	width: 100%;
+	height: 1px;
+	background: var(--White);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+ .smooth-scroll {
+	overflow: hidden !important;
+    }
+
+/*////RWD////*/
+@media screen and (max-width:1660px) {
+
+}
+@media screen and (max-width:1440px) {
+  
+}
+@media screen and (max-width:1366px) {
+  
+}
+@media screen and (max-width:1280px) {
+
+}
+@media screen and (max-width:1024px) {
+	body {
+		font-size: 16px;
+	}
+	.socialLink04 i{
+		transform: none;
+	}
+}
+@media (orientation:landscape) and (max-height: 768px) {
+  
+}
+@media (orientation:portrait) and (max-height: 1024px) {
+	.mobile{
+		display: block !important;
+	}
+	.desktop{
+	  display: none !important;
+	}
+	
+}
+@media screen and (max-width:480px) {
+	.logo{
+		width: 100px;
+		height: 137px;
+		top: 20px;
+		left: 30px;
+	}
+	.cursor{
+		display: none;
+	}
+	.footer .container{
+		width: 90%;
+	}
+	.aRowLogo img {
+    	height: 40px;
+    	margin: 0 20px 20px 0;
+	}
+	.helf{
+		width: 100%;
+	}
+	.logoTitle {
+	    width: 70px;
+	    min-width: auto;
+	}
+	.scrollDown{
+		left: 43%;
+	}
+	.scrollDown.active{
+		opacity: 0;
+		transition: .5s;
+	}
+}
+/*Iphone 10*/
+@media (orientation: portrait) and (max-height: 812px) {
+	.logo{
+		width: 90px;
+		height: 123px;
+	}
+}
+@media (orientation: portrait) and (max-height: 736px) {
+
+	.logo{
+		width: 73px;
+		height: 100px;
+	}
+}
+@media screen and (max-width: 390px) {
+	
+}
+@media (orientation: portrait) and (max-height: 667px) {
+	.logo{
+		width: 66px;
+		height: 90px;
+	}
+
+}
+@media screen and (max-width: 320px) {
+}
